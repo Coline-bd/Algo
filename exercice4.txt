@@ -1,0 +1,7 @@
+Créer variable age
+Demander age
+age <- age rentré
+Si age < 18
+	afficher "Vous n'êtes pas majeur"
+Sinon 
+	afficher "age valide"
