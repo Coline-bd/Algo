@@ -1,0 +1,8 @@
+Créer variable naissance
+demander année de naissance
+naissance <- année de naissance
+créer variable année
+année <- année actuelle
+créer variable age
+age <- naissance - année
+afficher age
