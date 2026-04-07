@@ -1,0 +1,9 @@
+créer variable a
+créer variable b
+a<- coline
+b <- juliette
+créer variable c
+c <- a
+a <- b
+b <- c
+
