@@ -1,0 +1,9 @@
+Créer variable Feu
+Demander la couleur du feu
+Feu <- couleur entrée
+Si Feu == "rouge"
+Afficher "Stop"
+Sinon Si Feu == "orange"
+Afficher "Ralentir"
+Sinon Si Feu == "vert"
+Afficher "Avancer"
