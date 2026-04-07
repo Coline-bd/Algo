@@ -1,0 +1,10 @@
+créer variable prénom
+demander le prénom
+prénom <- prénom rentré
+créer variable age
+demander age
+age <- age rentré
+créer variable statut
+statut <- demander statut de connexion
+afficher prénom, age, statut
+
