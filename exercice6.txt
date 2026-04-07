@@ -1,0 +1,14 @@
+Créer variable note
+Demander la note
+note <- note rentrée
+Si note >=16
+Afficher "Admis mention très bien"
+Sinon Si note >= 14 
+Afficher "Admis mention bien"
+Sinon Si note >=12 
+Afficher "Admis mention passable"
+Sinon si note >=10
+Afficher "Admis"
+Sinon 
+Afficher "Refusé"
+
