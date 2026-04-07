@@ -2,6 +2,7 @@ Créer variable naissance
 demander année de naissance
 naissance <- année de naissance
 créer variable année
+demander année actuelle
 année <- année actuelle
 créer variable age
 age <- naissance - année
