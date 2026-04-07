@@ -1,0 +1,11 @@
+Créer variable motdepasse
+Demander le mot de passe
+motdepasse <- mot de passe rentré
+Si length(motdepasse) < 12
+Afficher "pas assez de caractère"
+Sinon
+motdepasseattendu <- mot de passe attendu
+Si motdepasse == motdepasseattendu
+Afficher "vérification réussie"
+Sinon
+Afficher "mot de passe incorrect"
