@@ -1,0 +1,37 @@
+Exercice 1 : afficher les nombres pairs
+créer variable i
+for i de 1 à 20
+	Si i modulo 2 == 0
+		afficher i
+	Fin si
+Fin for
+
+
+Exercice 2 : compte à rebours
+créer variable i
+for i de 0 à 10
+	afficher 10-i
+fin for
+
+
+Exercice 3 : simuler un nombre d'essais de connexion
+créer variable i
+for i de 1 à 3
+	si  connexion = vraie
+		afficher i		
+		sortir de la boucle	
+	fin si
+fin for
+
+
+Exercice 4 : table de multiplication
+créer une variable nombre
+demander un nombre
+nombre <- nombre rentré
+créer variable i 
+for i de 1 à 10
+	afficher nombre x i
+fin for
+
+
+
