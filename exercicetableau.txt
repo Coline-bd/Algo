@@ -1,0 +1,38 @@
+Exercice 1 : afficher tous les éléments d'un tableau
+créer tableau tableau
+Pour i de 0 à taille de tableau-1
+	afficher tableau[i]
+fin Pour
+
+
+Exercice 2 : calculer la moyenne d'une liste de notes
+créer tableau notes
+créer variable somme <-0
+Pour i de 0 à taille de notes-1
+	somme+=notes[i]
+fin Pour
+Créer variable moyenne
+moyenne <- somme/taille de notes
+Afficher moyenne
+
+
+Exercice 3 : trouver le plus grand et le plus petit nombre 
+créer tableau nombres
+créer variable min<- nombres[0]
+créer variable max <-nombres[0]
+Pour i de 0 à taille de nombres-1
+	Si nombres[i]<min
+		min = nombres[i]
+	Fin si
+	Si nombres[i]>max
+		max = nombres[i]
+Fin Pour
+Afficher min + max
+
+Exercice 4 : compter le nombres d'éléments
+créer un tableau nombre
+créer variable compte <-0
+Pour i de 0 à taille de nombre-1
+	compte+=1
+Fin Pour
+Afficher compte
