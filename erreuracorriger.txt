@@ -1,0 +1,46 @@
+Exercice 1
+
+age <- 16
+SI age >= 18
+	AFFICHER "Majeur"
+SINON
+	AFFICHER "Mineur"
+FIN SI
+
+
+
+Exercice 2
+
+notes <- [10,12,14]
+somme <- 0
+
+POUR i de 0 à taille de notes-1
+	somme <- somme + note
+FIN POUR
+
+moyenne <- somme / taille de notes
+AFFICHER moyenne
+
+
+Exercice 3
+note <- 8
+
+SI note >= 10
+	AFFICHER "Admnis"
+SINON 
+	AFFICHER "Refusé"
+FIN SI
+
+
+
+Exercice 4
+
+notes <- []
+somme <- 0
+
+POUR i de 0 à taille de notes - 1
+	somme <- somme + note[i]
+FIN POUR
+
+moyenne <- somme / taille de notes
+AFFICHER moyenne
