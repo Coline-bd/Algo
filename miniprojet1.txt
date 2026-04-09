@@ -1,0 +1,22 @@
+Mini projet 1 : nombre mystère
+créer variable nbmaxtentatives
+créer variable nbmystere <- nombre choisi par l'ordinateur
+créer variable nbtentatives <-1
+
+TANT QUE nbtentatives <= nbmaxtentatives
+	demander un nombre entre 1 et 100 à l'utilisateur	
+	essai <- nombre rentré
+	SI essai est un number ET 1 <= essai <= 100
+		SI essai == nbmystere
+			AFFICHER "vous avez trouvé le nombre mystère"
+			ARRETER TANT QUE
+		SINON SI essai < nbmystere
+			AFFICHER "le nombre choisi est trop petit"
+		SINON SI essai > nbmystere
+			AFFICHER "le nombre choisi est trop grand"
+		FIN SI
+	SINON
+		AFFICHER "Erreur"	
+	FIN SI
+	nbtentatives <- nbtentatives + 1
+FIN TANT QUE
