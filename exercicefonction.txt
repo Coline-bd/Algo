@@ -1,0 +1,47 @@
+Exercice 1
+sous algorithme CalculerTVA(prixHT,tauxTVA)
+	tva <- prixHT * (tauxTVA/100)
+	retourner tva
+FIN
+
+Exercice 2
+Demnander un prix HT
+Demander un taux TVA en pourcentage
+prixHT <- prix HT rentré
+tauxTVA <- taux TVA rentré
+prixTVA <- CalculterTVA(prixHT,tauxTVA)
+prixTTC <- prixTVA + prixHT
+Afficher prixTTC
+
+
+Exercice 3
+sous algorithme calculerMoyenne(note1,note2,note3)
+	somme <- note1 + note2 + note3
+	moyenne <- somme / 3
+	retourner moyenne
+FIN
+
+
+sous algorithme attribuerMention(moyenne)
+	Si moyenne >= 16
+		retourner "Très bien"
+	Sinon Si moyenne >= 14
+		retourner "Bien"
+	Sinon Si moyenne >=12
+		retourner "Assez bien"
+	Sinon Si moyenne >=10
+		retourner "Passable"
+	Sinon si moyenne <10
+		retourner "insuffisant"
+	Fin SI
+FIN
+
+Demander 3 notes
+note1 <- note rentrée
+note2 <- note rentrée
+note3 <- note rentrée
+moyenne <- calculermoyenne(note1, note2, note3)
+mention <- attribuerMention(moyenne)
+Affihcer "vous avez obtenu une moyenne de " + moyenne + "avec mention " + mention
+
+ 
