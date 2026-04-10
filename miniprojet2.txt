@@ -3,7 +3,7 @@ Miniprojet 2 : Gestion d'un panier
 Sous algorithme calculTotal(liste)
 	total<-0
 	POUR i de 0 à taille de liste -1
-		total <- total + liste[i,1]
+		total <- total + liste[i][1]
 	FIN POUR
 	RETOURNER total
 FIN
