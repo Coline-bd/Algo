@@ -1,0 +1,64 @@
+Mini projet 4 : logique d'une application mobile
+
+
+Sous algorithme validerChamps(champs)
+	SI champs == null
+		RETOURNER faux
+	SINON 
+		RETOURNER vrai
+	FIN SI
+FIN
+
+
+Sous alogrithme estMajeur(age)
+	SI age >= 1
+		RETOURNER vrai
+	SINON
+		RETOURNER faux
+	FIN SI
+FIN
+
+Sous algorithme validerInscription(login,password,age)
+	SI validerChamps(login) ET validerChamps(password) ET validerChamps(age)
+		SI estMajeur(age)
+			Valider l'inscription
+			AFFICHER "Inscription validée" 
+		SINON
+			AFFICHER "Accès interdit aux mineurs"
+		FIN SI	
+	SINON
+		AFFICHER "veuillez remplir les champs demandés"
+	FIN SI
+FIN
+
+
+Sous algorithme verifierConnexion()
+	SI connexion valide
+		RETOURNER vrai
+	SINON
+		RETOURNER faux
+	FIN SI
+FIN
+
+
+Sous algorithme AccesPage(connexion)
+	SI verifierConnexion
+		autoriser l'accès à la page
+	SINON
+		refuser l'accès à la page
+	FIN SI
+FIN
+
+
+
+
+DEMANDER un login
+login <- login rentré
+DEMANDER un mot de passe
+password <- mot de passe rentré
+DEMANDER l'age
+age <- age rentré
+validerInscription(login,password,age)
+connexion <- verifierConnexion()
+AccesPage(connexion)
+
