@@ -1,0 +1,47 @@
+Miniprojet 2 : Gestion d'un panier
+
+Sous algorithme calculTotal(liste)
+	total<-0
+	POUR i de 0 à taille de liste -1
+		total <- total + liste[i,1]
+	FIN POUR
+	RETOURNER total
+FIN
+	
+Sous algorithme verifierRemise(total,seuil)
+	SI total >= seuil
+		RETOURNER vrai
+	SINON 
+		RETOURNER faux
+	FIN SI
+FIN
+
+
+Sous algorithme appliquerRemise(total,remise)
+	RETOURNER total - total*remise
+FIN
+
+
+Sous algorithme validationPanier(liste)
+	SI taille de liste >0
+		AFFICHER "Vous pouvez valider votre panier"
+	SINON
+		AFFICHER "votre panier est vide, ajoutez des articles"
+	FIN SI
+FIN
+
+
+
+
+panier <- [["livre",20],[ "peinture",5], ["feuille",3],[ "cd",15], ["jeu",40]]
+seuil <-50
+remise <- 0.1
+
+total <- calculTotal(panier)
+SI verifierRemise(total,seuil)
+	total <- appliquerRemise(total,remise)
+	AFFICHER "vous bénéficiez d'une remise de " + remise*100 "% - nouveau total de " + total + "euros"
+SINON
+	AFFICHER "votre total est de " + total + "euros"
+FIN SI 
+validationPanier(panier)
