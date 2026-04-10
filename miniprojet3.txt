@@ -1,0 +1,46 @@
+Miniprojet 3 : simulation de connexion utilisateur
+
+Sous algorithme verifierIdentifiants(login, motdepasse)
+	SI login est valide ET motdepasse est valide
+		RETOURNER vrai
+	SINON 
+		RETOURNER faux
+	FIN SI
+FIN
+
+
+sous algorithme calculTentatives(maxTentatives,nbTentatives)
+	RETOURNER maxTentatives-nbTentatives	
+FIN
+
+
+
+Sous algorithme afficherMessage(connexion)
+	SI connexion
+		AFFICHER "connexion réussie"
+	SINON
+		
+		AFFICHER "identifiants incorrects"
+	FIN SI
+FIN
+
+
+
+
+maxTentatives <- 3
+nbTentatives <- 1
+
+TANT QUE calculTentatives(maxTentatives,nbTentatives) >= 0
+	DEMANDER le login
+	login <- login rentré
+	DEMANDER le mot de passe
+	password <- mot de passe rentré
+	connexion <- verifierIdentifiants(login,password)
+	afficherMessage(connexion)
+	SI connexion 
+		ARRETER TANT QUE
+	SINON
+		nbTentatives <- nbTentatives + 1
+	FIN SI
+FIN TANT QUE
+
