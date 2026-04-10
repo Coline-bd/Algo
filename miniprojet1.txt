@@ -1,7 +1,7 @@
 Mini projet 1 : nombre mystère
-créer variable nbmaxtentatives
-créer variable nbmystere <- nombre choisi par l'ordinateur
-créer variable nbtentatives <-1
+nbmaxtentatives <- 6
+nbmystere <- nombre choisi par l'ordinateur
+nbtentatives <-1
 
 TANT QUE nbtentatives <= nbmaxtentatives
 	demander un nombre entre 1 et 100 à l'utilisateur	
@@ -16,7 +16,7 @@ TANT QUE nbtentatives <= nbmaxtentatives
 			AFFICHER "le nombre choisi est trop grand"
 		FIN SI
 	SINON
-		AFFICHER "Erreur"	
+		AFFICHER "Erreur de saisie du nombre"	
 	FIN SI
 	nbtentatives <- nbtentatives + 1
 FIN TANT QUE
