@@ -1,0 +1,72 @@
+Mini projet 5 : Analyse de notes d'une classe
+
+
+Sous algorithme ajouterNotes(nbNotes)
+        listeNote <- []
+        POUR i de 0 à nbNotes-1
+                DEMANDER de rentrer une note
+                note <- note rentrée
+                listeNote[i] = [note]
+        FIN POUR
+        RETOURNER listeNote
+FIN
+
+
+
+Sous algorithme calculerMoyenne(liste)
+	somme <- 0
+	SI taille de liste >=1	
+		Pour i de 0 à taille de liste-1
+			somme+=liste[i]
+		FIN POUR
+		moyenne <- somme/taille de liste
+		RETOURNER moyenne
+	SINON
+		AFFICHER "erreur : aucune note à traiter"
+	FIN SI
+FIN
+
+
+Sous algorithme trouverMeilleureNote(liste)
+	max <-liste[0]
+	Pour i de 0 à taille de liste-1
+	SI liste[i]>max
+                max = liste[i]
+	FIN POUR
+	RETOURNER max
+FIN
+
+
+Sous algorithme trouverPireNote(liste)
+        min <-liste[0]
+        Pour i de 0 à taille de liste-1
+        SI liste[i]<min
+                min = liste[i]
+        FIN POUR
+        RETOURNER min
+FIN
+
+
+Sous algorithme admission(liste)
+	admis <-0	 
+	Pour i de 0 à taille de liste-1
+		SI liste[i] >= 10
+			admis <- admis +1
+		FIN SI
+	FIN POUR
+FIN		
+
+
+
+Demander le nombre de notes
+nbNotes <- nombre rentré
+Notes <- ajouterNotes(nbNotes)
+moyenne <- calculerMoyenne(Notes)
+AFFICHER "la moyenne de classe est " + moyenne
+meilleurenote <- trouverMeilleureNote(notes)
+AFFICHER "la meilleure note est " + meilleurenote
+pireNote <- trouverPireNote(notes)
+AFFICHER "la moins bonne note est " + pireNote
+nbAdmission <- admission(notes)
+AFFICHER "nombre d'élèves admis : " + nbAdmission
+
