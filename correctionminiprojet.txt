@@ -1,0 +1,250 @@
+Mini projet 1 : nombre mystère
+
+Données :
+Nombre choisi par l'ordinateur
+Nombre de tentatives : entrée potentielle ou définie à l'avance
+
+Sorties :
+- Message d'erreur : si le nombre rentré par l'utilisateur n'est pas un nombre entier compris entre 1 et 100
+- Message d'erreur si le nb de tentative choisi n'est pas un nombre entier
+- Message de succès : si l'utilisateur trouve le nombre mystère
+- Message d'information : si le nombre est trop grand
+			si le nombre est trop petit
+- Message d'échec : si l'utilisateur ne trouve pas au bout des tentatives
+
+
+Etapes 
+
+Définir le nombre mystère
+Définir le nombre de tentatives (par l'utilisateur potentiellement)
+Demander un nombre à l'utilisateur
+Vérifier si le nombre est conforme (cas limite)
+Comparer le nombre rentré avec le nombre mystère
+Si c'est bon, message de victoire
+Si c'est pas bon, message trop petit ou trop grand + réduire le nombre de tentatives
+Vérifier le nombre de tentatives restantes
+Si encore tentatives restantes, on revient à l'étape 3
+
+
+Algorithme 
+
+nbmystere <- nombre choisi par l'ordinateur
+nbmaxtentatives <- nombre choisi par l'utilisateur
+nbtentatives <-1
+
+TANT QUE nbmaxtentatives n'est pas un nombre entier	
+	Demander un nombre de tentatives
+	nbmaxtentatives <- nombre rentré
+	SI nbmaxtentatives n'est pas un entier numérique positif
+		AFFICHER "erreur de saisie : entrez un nombre entier positif"
+	FIN SI
+FIN TANT QUE
+
+essai <- 0
+TANT QUE (nbtentatives <= nbmaxtentatives) OU (essai n'est pas un nombre entier)
+	demander un nombre entre 1 et 100 à l'utilisateur	
+	essai <- nombre rentré
+	SI essai est un number ET 1 <= essai <= 100
+		SI essai == nbmystere
+			AFFICHER "vous avez trouvé le nombre mystère"
+			ARRETER TANT QUE
+		SINON SI essai < nbmystere
+			AFFICHER "le nombre choisi est trop petit"
+			nbtentatives <- nbtentatives + 1
+		SINON SI essai > nbmystere
+			AFFICHER "le nombre choisi est trop grand"
+			nbtentatives <- nbtentatives + 1
+		FIN SI
+	SINON
+		AFFICHER "Erreur de saisie du nombre"
+	FIN SI
+	SI nbtentatives <= nbmaxtentatives
+		AFFICHER ‘Echec ! Vous n’avez plus de tentative."
+	FIN SI
+FIN TANT QUE
+
+
+
+
+--------------------------------------------------------------------
+Miniprojet 2 : Gestion d'un panier
+
+Données : 
+Prix unitaire des articles
+Prix total
+Montant de la remise
+Seuil de la remise
+Quantité des articles : rentrée par l'utilisateur
+
+Sorties :
+-Seuil de remise atteint : vous bénéficiez d'une remise de 10%
+-cas d'erreur : panier vide : impossible de valider le panier
+-validation effectuée
+- cas d'erreur : la quantité rentrée n'est pas un nombre entier supérieur à 0 : message d'erreur
+
+
+
+Sous algorithme calculTotal(liste)
+	total<-0
+	POUR i de 0 à taille de liste -1
+		total <- total + liste[i][1]
+	FIN POUR
+	RETOURNER total
+FIN
+	
+Sous algorithme verifierRemise(total,seuil)
+	SI total >= seuil
+		RETOURNER vrai
+	SINON 
+		RETOURNER faux
+	FIN SI
+FIN
+
+
+Sous algorithme appliquerRemise(total,remise)
+	RETOURNER total - total*remise
+FIN
+
+
+Sous algorithme validationPanier(liste)
+	SI taille de liste >0
+		AFFICHER "Vous pouvez valider votre panier"
+	SINON
+		AFFICHER "votre panier est vide, ajoutez des articles"
+	FIN SI
+FIN
+
+
+
+
+panier <- [["livre",20],[ "peinture",5], ["feuille",3],[ "cd",15], ["jeu",40]]
+seuil <-50
+remise <- 0.1
+
+
+SI l'utilisateur valide le panier
+	SI le panier est vide
+		AFFICHER "votre panier est vide, ajoutez des articles"
+		BLOQUER la validation du panier
+	SINON
+		total <- calculTotal(panier)
+		SI verifierRemise(total,seuil)
+			total <- appliquerRemise(total,remise)
+		AFFICHER "vous bénéficiez d'une remise de " + remise*100 "% - nouveau total de " + total + "euros"
+		SINON
+			AFFICHER "votre total est de " + total + "euros"
+		FIN SI 
+		VALIDER le panier
+		AFFICHER "votre panier a été validé"
+	FIN SI
+FIN SI
+
+
+
+----------------------------------------------------------------
+Miniprojet 3 : simulation de connexion utilisateur
+
+Données :
+login rentré
+mot de passe rentré
+login de la bdd
+mot de passe de la bdd
+nbtentatives
+statut connecté
+
+Sorties :
+-Cas d'erreur : mauvais login ou mot de passe
+- Cas d'erreur : mauvais format de login/mot de passe ou champ vide
+-Cas de succès : identifiants correct
+-cas d'erreur : l'utilisateur a échoué 3 fois
+
+
+
+
+Sous algorithme verifierIdentifiants(login, motdepasse)
+	SI login est vide OU motdepasse est vide
+		RETOURNER "Vous devez remplir tous les champs"
+	FIN SI
+	SI format de login incorrect ou format de motdepasse incorrect
+		RETOURNER "format de login ou mot de passe incorrect"
+	FIN SI 
+	login <- nettoyer login
+	motdepasse <- nettoyer motdepasse
+RETOURNER login et motdepasse (au sein d'un tableau ou d'un objet)
+FIN
+
+
+
+Sous algorithme verifierLoginExist(login)
+	DEMANDER les donnés de login à la base de données
+	SI la réponse est vide
+		RETOURNER erreur
+	SINON
+		RETOURNER les données du compte
+	FIN SI
+FIN
+
+Sous algorithme verifierPasswordCorrect(passwordUser, passwordBDD)
+	SI passwordUser !== password BDD
+		RETOURNER false
+	SINON 
+		RETOURNER true
+	FIN SI
+FIN
+
+
+
+sous algorithme calculTentatives(tentative)
+	tentative <- tentavie - 1
+	SI tentative <= 0
+		RETOURNER false
+	SINON
+		RETOURNER tentative	
+	FIN SI
+FIN
+
+
+tentatives <- 3
+
+TANT QUE tentative > 0
+	DEMANDER le login
+	loginUser <- login rentré
+	DEMANDER le mot de passe
+	password <- mot de passe rentré
+	verif <- verifierIdentifiants(loginUser, password) // vérifier les champs et format
+	SI verif possède un message d'erreur // saisie incorrecte
+		AFFICHER le message d'erreur
+	SINON // saisie correcte
+		dataUser <-verifierLoginExist(loginUser) // vérifier login
+		SI dataUser est false // login incorrect
+			AFFICHER le message d'erreur
+			tentative <- calculTentative(tentative)
+			SI tentative est false // tentative épuisée
+				AFFICHER le message d'erreur
+				BLOQUER l'utilisateur
+				SORTIR de la boucle
+			FIN SI
+		SINON //login correct
+			passwordBDD <- password du compte dataUser
+			isValid <- verifierPasswordCorrect(passwordUser,passwordBDD)
+			SI isValid est false //mot de passe faux
+				AFFICHER le message d’erreur
+				tentative <- calculTentative(tentative)
+				SI tentative est false
+					AFFICHER message d’erreur
+              				BLOQUER l’utilisateur
+               				SORTIR de la boucle
+            			FIN SI
+         		SINON //les mots de passe correspondent
+            			CONNECTER l’utilisateur
+           			status <- true
+            			AFFICHER le message de succès
+           			SORTIR de la boucle
+ 			FIN SI
+		FIN SI
+	FIN SI
+FIN TANT QUE
+
+
+
+
