@@ -1,0 +1,24 @@
+Exercices de tri
+
+
+Exercice 1-------------------------------------------
+tableau <- [5,1,4,2,8]
+
+Passage i =0
+[1,5,4,2,8] j=0 -> échanger 1 et 5
+[1,4,5,2,8] j=1 -> échanger 4 et 5
+[1,4,2,5,8] j=2 -> échanger 2 et 5
+[1,4,2,5,8] j=3 -> ok
+
+Passage i = 1
+[1,4,2,5,8] j=0 -> ok
+[1,2,4,5,8] j=1 -> échanger 4 et 2
+[1,2,4,5,8] j=2 -> ok
+
+Passage i = 2
+[1,2,4,5,8] j=0 -> ok
+[1,2,4,5,8] j=1 -> ok
+
+Passage i = 3
+[1,2,4,5,8] j=0 -> ok
+
