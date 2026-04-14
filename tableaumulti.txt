@@ -3,7 +3,7 @@ Exercice 1 : Afficher une grille de morpion
 Morprion <- [
 		["","",""],
 		["","",""],
-		["","",""],
+		["","",""]
 	]
 
 Morpion[0][0] <- "X"
@@ -30,6 +30,19 @@ POUR j de 0 à taille de notes[1]-1
 FIN POUR
 AFFICHER somme / taille de notes[1]
 
+
+Version avec une fonction----------------------
+
+Sous-algorithme moyenneClasse(tableau)
+	somme <-0
+	POUR i de 0 à taille de tableau -1
+		somme <- somme + tableau[i]
+	FIN POUR
+	moyenne <- somme / taille de tableau
+	RETOURNER moyenne
+	FIN SOUS-ALGORITHME
+
+
 //calcul de la moyenne générale
 somme <-0
 nbEleve <-0
@@ -41,6 +54,19 @@ POUR i de 0 à taille de notes -1
 FIN POUR
 AFFICHER somme / nbEleve
 
+Version avec la fonction moyenneClasse--------------------------
+
+SOUS-ALGORITHME moyenneGenerale(tableau)
+	somme<-0
+	POUR i de 0 à taille de tableau -1
+		somme <- moyenneClasse(tableau[i])
+	FIN POUR
+	moyenne <- somme / taille de tableau
+	RETOURNER moyenne
+	FIN SOUS ALGORITHME
+
+ALGORITHME PRINCIPAL
+moyennePremiereClasse <- moyenne(notes[0])
 
 
 Exercice 3 : Chercher dans une grille
@@ -52,16 +78,18 @@ nombres <- [
 		[2,9,4,6]
 	]
 
-target <- nombre choisi par l'utilisateur
-trouver <- faux
-POUR i de 0 à taille de nombres -1
-        POUR j de 0 à taille de nombres[i]-1
-		SI nombres[i][j]==target
-			AFFICHER "Valeur trouvée en ligne " + i + "colonne" + j
-			trouver <- vrai
-		FIN SI
+SOUS ALGORITHME chercherNombre(tableau, target)
+	trouver <- faux
+	POUR i de 0 à taille de tableau-1
+        	POUR j de 0 à taille de tableau[i]-1
+			SI tableau[i][j]==target
+				AFFICHER "Valeur trouvée en ligne " + i + "colonne" + j
+				trouver <- vrai
+			FIN SI
+		FIN POUR
 	FIN POUR
-FIN POUR
-SI trouve == faux
-	AFFICHER "Nombre non trouvé"
-FIN SI 
+	SI trouve == faux
+		AFFICHER "Nombre non trouvé"
+	FIN SI 
+	FIN SOUS-ALGORITHME
+
