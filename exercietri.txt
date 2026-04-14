@@ -22,3 +22,60 @@ Passage i = 2
 Passage i = 3
 [1,2,4,5,8] j=0 -> ok
 
+
+Exercice 2-----------------------------------
+tableau <- [26,10,14,37,13,25]
+
+Passage i=0
+min trouvé en j=1 
+échange entre tableau[0] et tableau[1]
+résultat : [10,26,14,37,13,25]
+
+Passage i=1
+min trouvé en j=4
+échange entre tableau[1] et tableau[4]
+résultat : [10,13,14,37,26,25]
+
+Passage i=2
+pas de min trouvé
+pas d'échange
+résultat : [10,13,14,37,26,25]
+
+Passage i=3
+min trouvé en j=5
+échange entre tableau[3] et tableau[5]
+résultat : [10,13,14,25,26,37]
+
+Passage i=4
+pas de min trouvé
+pas d'échange
+résultat : [10,13,14,25,26,37]
+
+
+Exercice 3--------------------------------
+tableau <- [45,12,89,23,67,34,5,78]
+
+//Trier le tableau
+SOUS-ALGORITHME triParSelection(tableau)
+	n <- taille de tableau
+	POUR i de 0 à n-2
+		min<-i
+		POUR j de i+1 à n-1
+			SI tableau[j]<tableau[min]
+				min<-j
+			FIN SI
+		FIN POUR
+		SI min!=i
+		temp <-tableau[i]
+		tableau[i]<-tableau[min]
+		tableau[min]<-temp
+		FIN SI
+	FIN POUR
+FIN SOUS-ALGORITHME
+
+ALGORITHME PRINCIPAL
+tableauTrie <- triParSelection(tableau)
+
+
+
+
