@@ -1,0 +1,74 @@
+Exercice 1 : recherche séquentielle simplte---------------------------------
+
+SOUS-ALGORITHME rechercheSequentielle(tableau,valeur)
+	POUR i de 0 à taille de tableau-1
+		SI tableau[i]==valeur
+			RETOURNER i //valeur trouvée
+		FIN SI
+	FIN POUR
+	RETOURNER "non trouvé"// valeur non trouvée
+FIN SOUS-ALGORITHME
+
+
+ALGORITHME PRINCIPAL
+prenoms<-["coline","juliette","lucas","rafael"]
+DEMANDER un prénom à rechercher
+target <- prénom rentré
+rechercheSequentielle(prenoms,target)
+
+
+Exercice 2 : compter les occurences------------------------------------------
+
+
+SOUS-ALGORITHME rechercheOccurence(tableau,valeur)
+	compteur<-0
+	POUR i de 0 à taille de tableau-1
+		SI tableau[i]==valeur
+			compteur <- compteur +1
+		FIN SI
+	FIN POUR
+	RETOURNER compteur
+FIN SOUS-ALGORITHME
+
+
+ALGORITHME PRINCIPAL
+tableau <-[22,1,5,46,46,34,18]
+DEMANDER un nombre à rechercher
+target <- nombre rentré
+trouve <- rechercheOccurence(tableau,target)
+AFFICHER "nombre trouvé " + trouve + "fois"
+
+
+Exercice 3 : recheche dichotomique guidée---------------------------------
+tableau <- [2, 5, 8, 12, 16, 23, 38, 45, 56, 67, 78]
+
+SOUS-ALGORITHME rechercheDichotomique(tableau,valeur)
+	debut<-0
+	fin <- taille de tableau -1
+	TANT QUE debut <= fin
+		milieu <- (debut+fin)/2 (arrondir à l'entier inférieur)
+		SI tableau[milieu]==valeur
+			RETOURNER milieu //valeur trouvée
+		SINON SI tableau[milieu]<valeur
+			debut <- milieu +1
+		SINON
+			fin <-milieu -1
+		FIN SI
+	FIN TANT QUE
+	RETOURNER -1 //valeur non trouvée
+FIN SOUS-ALGORITHME
+
+
+//Traçage
+[2, 5, 8, 12, 16, 23, 38, 45, 56, 67, 78]
+debut <-0
+fin <- 10
+
+Passage 1
+debut <fin (0<10)
+milieu <-10/2=5
+tableau[5]=23 //valeur trouvée
+retourner 5
+
+	
+
