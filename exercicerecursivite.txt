@@ -1,0 +1,61 @@
+Exercice 1 : somme récursive-----------------------------------------
+
+
+//case de base : si n=0 retourner 0
+//cas récursif : n+somme(n-1)
+
+
+FONCTION somme(n)
+	SI n = 0
+		RETOURNER 0
+	SINON
+		RETOURNER n+somme(n-1)
+	FIN SI
+FIN FONCTION
+
+
+
+Traçage
+somme(4) -> attend 4 + somme(3) -> retourne 4+6=10
+	somme(3) -> attend 3 + somme(2) -> retourne 3+3=6
+		somme(2) -> attend 2 + somme(1) -> retourne 2+1 = 3
+			somme(1) -> attend 1 + somme(0) -> retourne 1+0 = 1
+				somme(0) -> retourne 0
+
+
+
+Exercice 2 : Puissance récursive------------------------
+//cas de base : n=0 retourne 1
+//cas récursif : retourne X x puissance(x,n-1)
+
+
+FONCTION puissance(X,n)
+	SI n=0
+		RETOURNER 1
+	SINON
+		RETOURNER X x puissance(x,n-1)
+	FIN SI
+FIN FONCTION
+
+
+
+Traçage
+
+puissance(2,4) -> attend 2 x puissance(2,3) -> retourne 2 x 8 = 16
+		puissance(2,3) -> attend 2 x puissance(2,2) -> retourne 2 x 4 = 8
+			puissance(2,2) -> attend 2 x puissance(2,1) -> retourne 2 x 2 = 4
+				puissance(2,1) -> attend 2 x puissance(2,0) -> retourne 2 x 1 =2
+					puissance(2,0) -> retourne 1
+
+
+
+
+
+
+
+
+
+
+
+
+
