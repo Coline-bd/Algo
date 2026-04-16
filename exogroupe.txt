@@ -1,0 +1,27 @@
+
+listeProduits <- tableau des produits
+date <- date du jour
+
+POUR i de 0 à taille de listeProduits -1
+	SI listeProduits[i][1] < date //périmé
+		AFFICHER listeproduits[i][0] + "périmé"
+	SINON SI listeProduits[i][1] < date+30
+		AFFICHER listeproduits[i][0] + "à surveiller"
+	FIN SI
+
+
+Fonction 
+	stock <-faux
+	prixmin <- 0
+	POUR i de 0 à taille de liste -1
+		SI liste[i][1]>0 //en stock
+			stock <- vrai
+			SI liste[i][2]<prixmin
+				prixmin <- liste[i][2]
+				produitMin <- liste[i][0]
+	SI stock est faux
+		RETOURNER "aucun produit en stock"
+	SINON	
+		RETOURNER produitMin
+
+
